@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc413f2b.css",
-    "main.js": "/static/js/main.1d3777ba.js",
-    "static/js/787.36559803.chunk.js": "/static/js/787.36559803.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.cc413f2b.css.map": "/static/css/main.cc413f2b.css.map",
-    "main.1d3777ba.js.map": "/static/js/main.1d3777ba.js.map",
-    "787.36559803.chunk.js.map": "/static/js/787.36559803.chunk.js.map"
+    "main.css": "/pookky789/tttest.git/static/css/main.cc413f2b.css",
+    "main.js": "/pookky789/tttest.git/static/js/main.5b0a7624.js",
+    "static/js/787.36559803.chunk.js": "/pookky789/tttest.git/static/js/787.36559803.chunk.js",
+    "static/media/logo.svg": "/pookky789/tttest.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pookky789/tttest.git/index.html",
+    "main.cc413f2b.css.map": "/pookky789/tttest.git/static/css/main.cc413f2b.css.map",
+    "main.5b0a7624.js.map": "/pookky789/tttest.git/static/js/main.5b0a7624.js.map",
+    "787.36559803.chunk.js.map": "/pookky789/tttest.git/static/js/787.36559803.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc413f2b.css",
-    "static/js/main.1d3777ba.js"
+    "static/js/main.5b0a7624.js"
   ]
 }
