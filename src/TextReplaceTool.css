@@ -1,0 +1,42 @@
+.text-replace-tool {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .text-replace-tool h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .text-replace-tool label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .text-replace-tool input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .text-replace-tool button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .text-replace-tool button:hover {
+    background-color: #3e8e41;
+  }
+  
