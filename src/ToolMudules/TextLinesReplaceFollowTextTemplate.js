@@ -22,8 +22,23 @@ function TextTemplate() {
 
   return (
     <div>
-      <textarea value={inputText} onChange={(event) => setInputText(event.target.value)}/>
-      <input value={inputTemplate} onChange={(event) => onSetTemplate(event.target.value)}/>
+      <textarea
+          id="origin-text"
+          name="origin-text"
+          rows="10"
+          cols="50"
+          value={inputText}
+          onChange={(event) => setInputText(event.target.value)}
+        ></textarea>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Enter text to search"
+          value={inputTemplate}
+          onChange={(event) => onSetTemplate(event.target.value)}
+        />
+
       <button onClick={handleReplace}>Replace</button>
       <textarea value={outputText} readOnly />
     </div>
