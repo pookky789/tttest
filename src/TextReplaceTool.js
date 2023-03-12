@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 function TextReplaceTool() {
   const [searchText, setSearchText] = useState('');
   const [replaceText, setReplaceText] = useState('');
