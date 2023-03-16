@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TextReplaceTool from './ToolMudules/TextReplaceTool';
 import TextLinesReplaceFollowTextTemplate from './ToolMudules/TextLinesReplaceFollowTextTemplate';
+import RemoveLine from './ToolMudules/RemoveLine';
 //import TextLinesReplaceFollowTextTemplate from './TextLinesReplaceFollowTextTemplate';
 const Home = () => TextReplaceTool;
 const App = () => {
@@ -44,17 +45,26 @@ const App = () => {
         <div className="row">
           <div className="col-md-2">
             <div className="sidebar">
+
             <h4>Replacement</h4>
               <Nav className="flex-column">
                 <Nav.Link onClick={() => handleLinkClick('/TextReplaceTool')} className={route === '/TextReplaceTool' ? 'active' : ''}>Normal Text</Nav.Link>
                 <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate </Nav.Link>
               </Nav>
+
+              <h4>Removement</h4>
+              <Nav className="flex-column">
+                <Nav.Link onClick={() => handleLinkClick('/RemoveLine')} className={route === '/RemoveLine' ? 'active' : ''}>Remove Text Line</Nav.Link>
+                <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate </Nav.Link>
+              </Nav>
+
             </div>
           </div>
           <div className="col-md-9">
 
           {route === '/TextReplaceTool' && <TextReplaceTool />}
           {route === '/TextLinesReplaceFollowTextTemplate' && <TextLinesReplaceFollowTextTemplate />}
+          {route === '/RemoveLine' && <RemoveLine />}
 
           </div>
         </div>

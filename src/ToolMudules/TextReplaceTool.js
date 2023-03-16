@@ -16,8 +16,20 @@ function TextReplaceTool() {
 
   return (
     <div className="text-replace-tool">
-      <h1>Text Replace Tool</h1>
+      
+      <h1>Text Replace Tool</h1>  
       <form onSubmit={handleSubmit}>
+    
+      <label htmlFor="origin-text">Origin Text:</label>
+      <textarea
+          id="origin-text"
+          name="origin-text"
+          rows="10"
+          cols="50"
+          value={inputText}
+          onChange={(event) => setInputText(event.target.value)}
+        ></textarea>
+
         <label htmlFor="search">Search:</label>
         <input
           type="text"
@@ -37,17 +49,7 @@ function TextReplaceTool() {
           value={replaceText}
           onChange={(event) => setReplaceText(event.target.value)}
         />
-
-        <label htmlFor="origin-text">Origin Text:</label>
-        <textarea
-          id="origin-text"
-          name="origin-text"
-          rows="10"
-          cols="50"
-          value={inputText}
-          onChange={(event) => setInputText(event.target.value)}
-        ></textarea>
-
+   
         <button type="submit">Replace</button>
       </form>
 
