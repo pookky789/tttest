@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import AboutPage from './About';
 import TextReplaceTool from './ToolMudules/TextReplaceTool';
 import TextLinesReplaceFollowTextTemplate from './ToolMudules/TextLinesReplaceFollowTextTemplate';
 import RemoveLine from './ToolMudules/RemoveLine';
@@ -35,7 +36,7 @@ const App = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link onClick={() => handleLinkClick('/')} active={route === '/'}>Home</Nav.Link>
-            <Nav.Link onClick={() => handleLinkClick('/ToolMudules/TextReplaceTool')} active={route === '/ToolMudules/TextReplaceTool'}>About</Nav.Link>
+            <Nav.Link onClick={() => handleLinkClick('/About')} active={route === '/About'}>About</Nav.Link>
            </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -64,6 +65,7 @@ const App = () => {
           <div className="col-md-9">
 
           {route === '/' && <TextReplaceTool />}
+          {route === '/About' && <AboutPage />}
           {route === '/TextReplaceTool' && <TextReplaceTool />}
           {route === '/TextLinesReplaceFollowTextTemplate' && <TextLinesReplaceFollowTextTemplate />}
           {route === '/RemoveLine' && <RemoveLine />}
