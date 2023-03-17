@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TextReplaceTool from './ToolMudules/TextReplaceTool';
 import TextLinesReplaceFollowTextTemplate from './ToolMudules/TextLinesReplaceFollowTextTemplate';
 import RemoveLine from './ToolMudules/RemoveLine';
+import KeepLine from './ToolMudules/KeepLine';
 //import TextLinesReplaceFollowTextTemplate from './TextLinesReplaceFollowTextTemplate';
 const Home = () => TextReplaceTool;
 const App = () => {
@@ -49,13 +50,13 @@ const App = () => {
             <h4>Replacement</h4>
               <Nav className="flex-column">
                 <Nav.Link onClick={() => handleLinkClick('/TextReplaceTool')} className={route === '/TextReplaceTool' ? 'active' : ''}>Normal Text</Nav.Link>
-                <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate </Nav.Link>
+                <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate</Nav.Link>
               </Nav>
 
               <h4>Removement</h4>
               <Nav className="flex-column">
-                <Nav.Link onClick={() => handleLinkClick('/RemoveLine')} className={route === '/RemoveLine' ? 'active' : ''}>Remove Text Line</Nav.Link>
-                <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate </Nav.Link>
+                <Nav.Link onClick={() => handleLinkClick('/RemoveLine')} className={route === '/RemoveLine' ? 'active' : ''}>Remove Text Lines</Nav.Link>
+                <Nav.Link onClick={() => handleLinkClick('/KeepLine')} className={route === '/KeepLine' ? 'active' : ''}>Keep Text Lines</Nav.Link>
               </Nav>
 
             </div>
@@ -65,6 +66,7 @@ const App = () => {
           {route === '/TextReplaceTool' && <TextReplaceTool />}
           {route === '/TextLinesReplaceFollowTextTemplate' && <TextLinesReplaceFollowTextTemplate />}
           {route === '/RemoveLine' && <RemoveLine />}
+          {route === '/KeepLine' && <KeepLine />}
 
           </div>
         </div>
