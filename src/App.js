@@ -63,6 +63,7 @@ const App = () => {
           </div>
           <div className="col-md-9">
 
+          {route === '/' && <TextReplaceTool />}
           {route === '/TextReplaceTool' && <TextReplaceTool />}
           {route === '/TextLinesReplaceFollowTextTemplate' && <TextLinesReplaceFollowTextTemplate />}
           {route === '/RemoveLine' && <RemoveLine />}
