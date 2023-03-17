@@ -75,19 +75,31 @@ function TextReplaceTool() {
         <button
           onClick={handleCopy}
           style={{
-            position: 'absolute',
+            position: 'relative',
             //top: '10px',
             right: '10px',
             border: 'none',
             background: 'darkgray',
             cursor: 'pointer',
-            marginTop: '10px'
           }}
         >
           <FaCopy />
         </button>
+
+       
+
       </div>
 
+      <div class="col-md-9" style={{ position: 'relative', top: '20px' }}>
+        <h2 >Getting Started</h2>
+        <ol>
+          
+         <li>In the input text area, enter the lines of text that you want to process.</li>
+         <li>Click the "Replace" button to replace the lines of text with the text template.</li>
+          <li>The resulting text will be displayed in the Result text area. You can copy the Result text to your clipboard by clicking the copy icon button.</li>
+        </ol>
+      </div>
+  
     </div>
   );
 }
