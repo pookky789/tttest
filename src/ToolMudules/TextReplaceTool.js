@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { FaCopy } from 'react-icons/fa';
+
 function TextReplaceTool() {
   const [searchText, setSearchText] = useState('');
   const [replaceText, setReplaceText] = useState('');
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
-
+  
+  const outputRef = useRef(null);
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -12,6 +15,11 @@ function TextReplaceTool() {
     const regex = new RegExp(searchText, 'g');
     const result = inputText.replaceAll(regex, replaceText);
     setOutputText(result);
+  };
+
+  const handleCopy = () => {
+    outputRef.current.select();
+    document.execCommand('copy');
   };
 
   return (
@@ -52,18 +60,34 @@ function TextReplaceTool() {
    
         <button type="submit">Replace</button>
       </form>
-
-      <div className="result">
-        <label htmlFor="result">Result:</label>
-        <textarea
+     
+      <div style={{ position: 'relative', display: 'inline' }}>
+      <label htmlFor="result">Result:</label>
+          <textarea
           id="result"
           name="result"
           rows="10"
           cols="50"
           value={outputText}
           readOnly
+         ref={outputRef} 
         ></textarea>
+        <button
+          onClick={handleCopy}
+          style={{
+            position: 'absolute',
+            //top: '10px',
+            right: '10px',
+            border: 'none',
+            background: 'darkgray',
+            cursor: 'pointer',
+            marginTop: '10px'
+          }}
+        >
+          <FaCopy />
+        </button>
       </div>
+
     </div>
   );
 }

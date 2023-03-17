@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-function RemoveLine() {
+function KeepLine() {
   const [inputText, setInputText] = useState('Text line 1 aaa\nText line 2 bbb\nText line 3 ccc');
   const [searchText, setSearchText] = useState('bbb');
  // const [textTemplate, setTextTemplate] = useState(''); // predefined text template
-  const [outputText, setOutputText] = useState('Text line 1 aaa\nText line 3 ccc');
+  const [outputText, setOutputText] = useState('Text line 2 bbb');
 
 //   const handleSearchTextChange = (event) => {
 //     setSearchText(event.target.value);
@@ -13,14 +13,14 @@ function RemoveLine() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const lines = inputText.split('\n');
-    const updatedText = lines.filter(line => !line.includes(searchText)).join('\n');
+    const updatedText = lines.filter(line => line.includes(searchText)).join('\n');
     setOutputText(updatedText);
 
   };
 
   return (
     <div className="text-replace-tool">
-        <h1>Remove Text Line</h1>
+        <h1>Keep Text Line</h1>
       <form onSubmit={handleFormSubmit}>
         
       <label htmlFor="origin-text">Origin Text:</label>
@@ -33,7 +33,7 @@ function RemoveLine() {
           onChange={(event) => setInputText(event.target.value)}
         ></textarea>
 
-        <label htmlFor="search">Search for Remove Lines:</label>
+        <label htmlFor="search">Search for Keep Lines:</label>
         <input
           type="text"
           id="search"
@@ -43,7 +43,7 @@ function RemoveLine() {
           onChange={(event) => setSearchText(event.target.value)}
         />
 
-        <button type="submit">Remove lines</button>
+        <button type="submit">Keep lines</button>
       </form>
       <div className="result">
         <label htmlFor="result">Result:</label>
@@ -60,4 +60,4 @@ function RemoveLine() {
   );
 }
 
-export default RemoveLine;
+export default KeepLine;
