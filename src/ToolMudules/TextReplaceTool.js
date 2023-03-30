@@ -95,7 +95,8 @@ function TextReplaceTool() {
         <ol>
           
          <li>In the input text area, enter the lines of text that you want to process.</li>
-         <li>Click the "Replace" button to replace the lines of text with the text template.</li>
+         <li>Specify the search text to be replace.</li>
+         <li>Click the "Replace" button to replace search text with the text replace.</li>
           <li>The resulting text will be displayed in the Result text area. You can copy the Result text to your clipboard by clicking the copy icon button.</li>
         </ol>
       </div>

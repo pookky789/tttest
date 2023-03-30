@@ -56,6 +56,18 @@ function RemoveLine() {
           readOnly
         ></textarea>
       </div>
+
+      <div class="col-md-9" style={{ position: 'relative', top: '20px' }}>
+        <h2 >Getting Started</h2>
+
+        <ol>
+         <li>Paste the text into the origin input text area.</li>
+         <li>Specify the search text to be removed.</li>
+         <li>Click the "Remove lines" button to replace the lines of text with the text template.</li>
+          <li>The resulting text will be displayed in the Result text area. You can copy the Result text to your clipboard by clicking the copy icon button.</li>
+        </ol>
+      </div>
+
     </div>
   );
 }
