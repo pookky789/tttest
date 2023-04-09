@@ -8,6 +8,11 @@ function TextReplaceTool() {
   const [outputText, setOutputText] = useState('');
   
   const outputRef = useRef(null);
+  const handleCopy = () => {
+    outputRef.current.select();
+    document.execCommand('copy');
+  };
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -17,10 +22,7 @@ function TextReplaceTool() {
     setOutputText(result);
   };
 
-  const handleCopy = () => {
-    outputRef.current.select();
-    document.execCommand('copy');
-  };
+
 
   return (
     <div className="text-replace-tool">
