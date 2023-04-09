@@ -7,10 +7,8 @@ function AboutPage (){
               
                 <h2>Welcome to Text Transform</h2>
                 <p>Text Transform is a website that provides tools and resources for Transform and manipulating text in various ways. Whether you need to format or processing text data, Text Transform has the tools you need to get the job done.</p>
-                <h3>Our Tools</h3><p>Text Transform offers a variety of tools for working with text data, including:</p>
-                <ul><li><strong>Text Template</strong>: A simple React component that allows you to replace lines of text with a customizable text template.</li>
-                <li><strong>Word Counter</strong>: A tool that allows you to count the number of words in a block of text.</li>
-                </ul>
+                
+               
 
                 <h3>Our Mission</h3>
                 <p>At Text Transform, our mission is to provide powerful and easy-to-use tools for working with text data. We believe that text data is a valuable resource that can be used to gain insights, inform decisions, and create new products and services. By providing tools that make working with text data more accessible, we hope to enable more people to take advantage of its potential.</p>

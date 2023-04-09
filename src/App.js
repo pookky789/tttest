@@ -11,6 +11,7 @@ import TextReplaceTool from './ToolMudules/TextReplaceTool';
 import TextLinesReplaceFollowTextTemplate from './ToolMudules/TextLinesReplaceFollowTextTemplate';
 import RemoveLine from './ToolMudules/RemoveLine';
 import KeepLine from './ToolMudules/KeepLine';
+import AddPrefixAndSuffix from './ToolMudules/AddPrefixAndSuffix';
 //import TextLinesReplaceFollowTextTemplate from './TextLinesReplaceFollowTextTemplate';
 const Home = () => TextReplaceTool;
 const App = () => {
@@ -48,16 +49,16 @@ const App = () => {
           <div className="col-md-2">
             <div className="sidebar">
 
-            <h4>Replacement</h4>
+            <h4>Online Text Tools</h4>
               <Nav className="flex-column">
                 <Nav.Link onClick={() => handleLinkClick('/TextReplaceTool')} className={route === '/TextReplaceTool' ? 'active' : ''}>Normal Text</Nav.Link>
                 <Nav.Link onClick={() => handleLinkClick('/TextLinesReplaceFollowTextTemplate')} className={route === '/TextLinesReplaceFollowTextTemplate' ? 'active' : ''}>Replace Line in TextTemplate</Nav.Link>
               </Nav>
 
-              <h4>Removement</h4>
               <Nav className="flex-column">
                 <Nav.Link onClick={() => handleLinkClick('/RemoveLine')} className={route === '/RemoveLine' ? 'active' : ''}>Remove Text Lines</Nav.Link>
                 <Nav.Link onClick={() => handleLinkClick('/KeepLine')} className={route === '/KeepLine' ? 'active' : ''}>Keep Text Lines</Nav.Link>
+                <Nav.Link onClick={() => handleLinkClick('/AddPrefixAndSuffix')} className={route === '/AddPrefixAndSuffix' ? 'active' : ''}>Add Prefix and/or Suffix</Nav.Link>
               </Nav>
 
             </div>
@@ -70,6 +71,7 @@ const App = () => {
           {route === '/TextLinesReplaceFollowTextTemplate' && <TextLinesReplaceFollowTextTemplate />}
           {route === '/RemoveLine' && <RemoveLine />}
           {route === '/KeepLine' && <KeepLine />}
+          {route === '/AddPrefixAndSuffix' && <AddPrefixAndSuffix />}
 
          
 
